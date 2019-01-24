@@ -1,0 +1,43 @@
+<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
+<script src="https://rawgit.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+<script src="https://rawgit.com/mrdoob/three.js/master/examples/js/libs/inflate.min.js"></script>
+<style>
+    #arjsDebugUIContainer {
+        display: none;
+    }
+</style>
+<body style='margin : 0px; overflow: hidden;'>
+    <a-scene embedded arjs='sourceType: webcam;'>
+        <a-entity camera></a-entity>
+
+        <!-- <a-marker preset="hiro">
+            <a-entity fbx-model="src: url(/models/square1.fbx);" scale="0.1 0.1 0.1"></a-entity>
+        </a-marker> -->
+
+        <!-- <a-marker preset="kanji">
+            <a-entity fbx-model="src: url(/Ball.fbx);" scale="0.1 0.1 0.1"></a-entity>
+        </a-marker> -->
+
+        <a-marker preset='custom' type="pattern" url="/patterns/OCAD.patt">
+            <a-entity fbx-model="src: url(/models/mississaugatowersfixed.fbx);" scale="0.1 0.1 0.1"></a-entity>
+        </a-marker>
+
+        <a-marker preset='custom' type="pattern" url="/patterns/OCADA.patt">
+            <a-entity fbx-model="src: url(/models/CNTowerColour.fbx);" scale="0.5 0.5 0.5"></a-entity>
+        </a-marker>
+        
+        <a-marker preset='custom' type="pattern" url="/patterns/OCADB.patt">
+            <a-entity fbx-model="src: url(/models/clocktower.fbx);" scale="0.1 0.1 0.1"></a-entity>
+        </a-marker>
+
+        <a-marker preset='custom' type="pattern" url="/patterns/OCADC.patt">
+           <a-entity fbx-model="src: url(/models/librarycolour.fbx);" scale="0.1 0.1 0.1"></a-entity>
+        </a-marker>
+        
+        <a-marker preset='custom' type="pattern" url="/patterns/OCADD.patt">
+            <a-entity fbx-model="src: url(/models/square1.fbx);" scale="0.1 0.1 0.1"></a-entity>
+        </a-marker>
+
+    </a-scene>
+</body>
